@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RWebViewController : UIViewController
+@interface RWebViewController : UIViewController <UIWebViewDelegate>
+
+@property (nonatomic, strong) NSURL *startURL;
 
 @end

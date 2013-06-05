@@ -18,6 +18,11 @@
 		FA68567E174CD862001C8F42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA68567D174CD862001C8F42 /* Default-568h@2x.png */; };
 		FA685687174CD870001C8F42 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA685686174CD870001C8F42 /* RootViewController.m */; };
 		FA68568B174CD8E6001C8F42 /* RWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA68568A174CD8E6001C8F42 /* RWebViewController.m */; };
+		FA6856C1174D9916001C8F42 /* NavBack.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6856BD174D9916001C8F42 /* NavBack.png */; };
+		FA6856C2174D9916001C8F42 /* NavBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6856BE174D9916001C8F42 /* NavBack@2x.png */; };
+		FA6856C3174D9916001C8F42 /* NavForward.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6856BF174D9916001C8F42 /* NavForward.png */; };
+		FA6856C4174D9916001C8F42 /* NavForward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6856C0174D9916001C8F42 /* NavForward@2x.png */; };
+		FAD9B338175F6F9400F2DAEB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9B337175F6F9400F2DAEB /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		FA685686174CD870001C8F42 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		FA685689174CD8E6001C8F42 /* RWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWebViewController.h; sourceTree = "<group>"; };
 		FA68568A174CD8E6001C8F42 /* RWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWebViewController.m; sourceTree = "<group>"; };
+		FA6856BD174D9916001C8F42 /* NavBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBack.png; sourceTree = "<group>"; };
+		FA6856BE174D9916001C8F42 /* NavBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBack@2x.png"; sourceTree = "<group>"; };
+		FA6856BF174D9916001C8F42 /* NavForward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavForward.png; sourceTree = "<group>"; };
+		FA6856C0174D9916001C8F42 /* NavForward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavForward@2x.png"; sourceTree = "<group>"; };
+		FAD9B337175F6F9400F2DAEB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD9B338175F6F9400F2DAEB /* MobileCoreServices.framework in Frameworks */,
 				FA685668174CD862001C8F42 /* UIKit.framework in Frameworks */,
 				FA68566A174CD862001C8F42 /* Foundation.framework in Frameworks */,
 				FA68566C174CD862001C8F42 /* CoreGraphics.framework in Frameworks */,
@@ -74,6 +85,7 @@
 		FA685666174CD862001C8F42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAD9B337175F6F9400F2DAEB /* MobileCoreServices.framework */,
 				FA685667174CD862001C8F42 /* UIKit.framework */,
 				FA685669174CD862001C8F42 /* Foundation.framework */,
 				FA68566B174CD862001C8F42 /* CoreGraphics.framework */,
@@ -84,6 +96,7 @@
 		FA68566D174CD862001C8F42 /* WebAppWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				FA6856BB174D98E7001C8F42 /* Resources */,
 				FA685688174CD8DE001C8F42 /* Utils */,
 				FA685684174CD866001C8F42 /* View Controllers */,
 				FA685676174CD862001C8F42 /* AppDelegate.h */,
@@ -123,6 +136,25 @@
 				FA68568A174CD8E6001C8F42 /* RWebViewController.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		FA6856BB174D98E7001C8F42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA6856BC174D98ED001C8F42 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FA6856BC174D98ED001C8F42 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FA6856BD174D9916001C8F42 /* NavBack.png */,
+				FA6856BE174D9916001C8F42 /* NavBack@2x.png */,
+				FA6856BF174D9916001C8F42 /* NavForward.png */,
+				FA6856C0174D9916001C8F42 /* NavForward@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +212,10 @@
 				FA68567A174CD862001C8F42 /* Default.png in Resources */,
 				FA68567C174CD862001C8F42 /* Default@2x.png in Resources */,
 				FA68567E174CD862001C8F42 /* Default-568h@2x.png in Resources */,
+				FA6856C1174D9916001C8F42 /* NavBack.png in Resources */,
+				FA6856C2174D9916001C8F42 /* NavBack@2x.png in Resources */,
+				FA6856C3174D9916001C8F42 /* NavForward.png in Resources */,
+				FA6856C4174D9916001C8F42 /* NavForward@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +344,7 @@
 				FA685683174CD862001C8F42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
