@@ -135,6 +135,8 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
     self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     self.webView.delegate = self;
     self.webView.scalesPageToFit = YES;
+    self.webView.autoresizingMask = (UIViewAutoresizingFlexibleWidth |
+                                     UIViewAutoresizingFlexibleHeight);
     [self.view addSubview:self.webView];
 }
 
