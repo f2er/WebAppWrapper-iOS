@@ -171,7 +171,9 @@
     // Init toolbar items.
     
     self.backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"NavBack"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonPressed:)];
+    self.backButton.imageInsets = UIEdgeInsetsMake(1.5f, 0, -1.5f, 0);
     self.forwardButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"NavForward"] style:UIBarButtonItemStylePlain target:self action:@selector(forwardButtonPressed:)];
+    self.forwardButton.imageInsets = UIEdgeInsetsMake(1.5f, 0, -1.5f, 0);
     self.refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshButtonPressed:)];
     self.stopButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(stopButtonPressed:)];
     self.moreActionButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(moreActionButtonPressed:)];
