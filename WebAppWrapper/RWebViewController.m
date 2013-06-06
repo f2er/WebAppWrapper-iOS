@@ -229,6 +229,8 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     if (webView == self.webView) {
+        self.navigationItem.prompt = webView.request.URL.absoluteString;
+        self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
         [self setButtonWithLoadingStatus:NO];
         [self refreshNavigationButtonStatus];
     }
