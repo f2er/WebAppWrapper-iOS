@@ -38,7 +38,6 @@ Or you can leave them untouched and change it in the `-configure:` method.
     // Set other internal hosts.
     
     self.otherInternalHosts = @[
-                                @"about:blank",
                                 @"googleads.g.doubleclick.net",
                                 @"metric.gstatic.com"
                                 ];
@@ -46,6 +45,7 @@ Or you can leave them untouched and change it in the `-configure:` method.
     // Set blocked hosts.
     
     self.blockedHosts = @[
+                          @"about:blank"
                           ];
     
     // Set max fail refresh count.
