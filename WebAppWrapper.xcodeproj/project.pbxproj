@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA685664174CD862001C8F42 /* WebAppWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebAppWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA685664174CD862001C8F42 /* v2ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = v2ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA685667174CD862001C8F42 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA685669174CD862001C8F42 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA68566B174CD862001C8F42 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,7 +83,7 @@
 		FA685665174CD862001C8F42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA685664174CD862001C8F42 /* WebAppWrapper.app */,
+				FA685664174CD862001C8F42 /* v2ex.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA685663174CD862001C8F42 /* V2EX */ = {
+		FA685663174CD862001C8F42 /* v2ex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA685681174CD862001C8F42 /* Build configuration list for PBXNativeTarget "V2EX" */;
+			buildConfigurationList = FA685681174CD862001C8F42 /* Build configuration list for PBXNativeTarget "v2ex" */;
 			buildPhases = (
 				FA685660174CD862001C8F42 /* Sources */,
 				FA685661174CD862001C8F42 /* Frameworks */,
@@ -178,9 +178,9 @@
 			);
 			dependencies = (
 			);
-			name = V2EX;
+			name = v2ex;
 			productName = WebAppWrapper;
-			productReference = FA685664174CD862001C8F42 /* WebAppWrapper.app */;
+			productReference = FA685664174CD862001C8F42 /* v2ex.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA685663174CD862001C8F42 /* V2EX */,
+				FA685663174CD862001C8F42 /* v2ex */,
 			);
 		};
 /* End PBXProject section */
@@ -325,10 +325,14 @@
 		FA685683174CD862001C8F42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebAppWrapper/WebAppWrapper-Prefix.pch";
 				INFOPLIST_FILE = "WebAppWrapper/WebAppWrapper-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -345,7 +349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA685681174CD862001C8F42 /* Build configuration list for PBXNativeTarget "V2EX" */ = {
+		FA685681174CD862001C8F42 /* Build configuration list for PBXNativeTarget "v2ex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA685682174CD862001C8F42 /* Debug */,
