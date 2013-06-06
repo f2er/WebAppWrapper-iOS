@@ -76,8 +76,8 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
 - (void)failRefresh
 {
     if (self.currentFailRefreshCount) {
-        [self refresh];
         self.currentFailRefreshCount--;
+        [self refresh];
     } else {
         [self showFailLoadWarning];
     }
@@ -264,7 +264,9 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     if (webView == self.webView) {
-        [self failRefresh];
+        if (error.code != NSURLErrorCancelled) {
+            [self failRefresh];
+        }
     }
 }
 
