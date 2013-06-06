@@ -99,7 +99,6 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
     // Set other internal hosts.
     
     self.otherInternalHosts = @[
-                                @"about:blank",
                                 @"googleads.g.doubleclick.net",
                                 @"metric.gstatic.com"
                                 ];
@@ -107,6 +106,7 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
     // Set blocked hosts.
     
     self.blockedHosts = @[
+                          @"about:blank"
                           ];
     
     // Set max fail refresh count.
