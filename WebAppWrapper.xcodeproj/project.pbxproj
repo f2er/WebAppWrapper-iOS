@@ -23,6 +23,8 @@
 		FA6856C3174D9916001C8F42 /* NavForward.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6856BF174D9916001C8F42 /* NavForward.png */; };
 		FA6856C4174D9916001C8F42 /* NavForward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6856C0174D9916001C8F42 /* NavForward@2x.png */; };
 		FAD9B338175F6F9400F2DAEB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD9B337175F6F9400F2DAEB /* MobileCoreServices.framework */; };
+		FAD9B33A1760220E00F2DAEB /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD9B3391760220E00F2DAEB /* icon@2x.png */; };
+		FAD9B33C1760221200F2DAEB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD9B33B1760221200F2DAEB /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		FA6856BF174D9916001C8F42 /* NavForward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavForward.png; sourceTree = "<group>"; };
 		FA6856C0174D9916001C8F42 /* NavForward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavForward@2x.png"; sourceTree = "<group>"; };
 		FAD9B337175F6F9400F2DAEB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FAD9B3391760220E00F2DAEB /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		FAD9B33B1760221200F2DAEB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 		FA68565B174CD862001C8F42 = {
 			isa = PBXGroup;
 			children = (
+				FAD9B33B1760221200F2DAEB /* icon.png */,
+				FAD9B3391760220E00F2DAEB /* icon@2x.png */,
 				FA68566D174CD862001C8F42 /* WebAppWrapper */,
 				FA685666174CD862001C8F42 /* Frameworks */,
 				FA685665174CD862001C8F42 /* Products */,
@@ -160,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA685663174CD862001C8F42 /* WebAppWrapper */ = {
+		FA685663174CD862001C8F42 /* V2EX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA685681174CD862001C8F42 /* Build configuration list for PBXNativeTarget "WebAppWrapper" */;
+			buildConfigurationList = FA685681174CD862001C8F42 /* Build configuration list for PBXNativeTarget "V2EX" */;
 			buildPhases = (
 				FA685660174CD862001C8F42 /* Sources */,
 				FA685661174CD862001C8F42 /* Frameworks */,
@@ -172,7 +178,7 @@
 			);
 			dependencies = (
 			);
-			name = WebAppWrapper;
+			name = V2EX;
 			productName = WebAppWrapper;
 			productReference = FA685664174CD862001C8F42 /* WebAppWrapper.app */;
 			productType = "com.apple.product-type.application";
@@ -198,7 +204,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA685663174CD862001C8F42 /* WebAppWrapper */,
+				FA685663174CD862001C8F42 /* V2EX */,
 			);
 		};
 /* End PBXProject section */
@@ -216,6 +222,8 @@
 				FA6856C2174D9916001C8F42 /* NavBack@2x.png in Resources */,
 				FA6856C3174D9916001C8F42 /* NavForward.png in Resources */,
 				FA6856C4174D9916001C8F42 /* NavForward@2x.png in Resources */,
+				FAD9B33A1760220E00F2DAEB /* icon@2x.png in Resources */,
+				FAD9B33C1760221200F2DAEB /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA685681174CD862001C8F42 /* Build configuration list for PBXNativeTarget "WebAppWrapper" */ = {
+		FA685681174CD862001C8F42 /* Build configuration list for PBXNativeTarget "V2EX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA685682174CD862001C8F42 /* Debug */,
