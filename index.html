@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Webappwrapper-ios : An web app wrapper for iOS." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Webappwrapper-ios</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/AlexRezit/WebAppWrapper-iOS">View on GitHub</a>
+
+          <h1 id="project_title">Webappwrapper-ios</h1>
+          <h2 id="project_tagline">An web app wrapper for iOS.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/AlexRezit/WebAppWrapper-iOS/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/AlexRezit/WebAppWrapper-iOS/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="webappwrapper-ios" class="anchor" href="#webappwrapper-ios"><span class="octicon octicon-link"></span></a>WebAppWrapper-iOS</h1>
+
+<p>An web app wrapper for iOS.</p>
+
+<h2>
+<a name="10-minutes-to-create-your-own-app" class="anchor" href="#10-minutes-to-create-your-own-app"><span class="octicon octicon-link"></span></a>10 Minutes To Create Your Own App</h2>
+
+<h3>
+<a name="clone-this-repo" class="anchor" href="#clone-this-repo"><span class="octicon octicon-link"></span></a>Clone This Repo</h3>
+
+<pre><code>$ git clone git@github.com:AlexRezit/WebAppWrapper-iOS.git
+$ open WebAppWrapper-iOS/WebAppWrapper.xcodeproj
+</code></pre>
+
+<h3>
+<a name="configure-links--other-settings" class="anchor" href="#configure-links--other-settings"><span class="octicon octicon-link"></span></a>Configure Links &amp; Other Settings</h3>
+
+<p>Most of the configurations you need to make is in <code>RootViewController.m</code> file.</p>
+
+<p>You can change the constants directly:</p>
+
+<pre><code>NSString * const kWebAppStartLink = @"http://yourwebapp.com/";
+NSString * const kWebAppHost = @"yourwebapp.com";
+</code></pre>
+
+<p>Or you can leave them untouched and change it in the <code>-configure:</code> method.</p>
+
+<pre><code>- (void)configure
+{
+    // Init start URL.
+
+    self.startURL = [NSURL URLWithString:kWebAppStartLink];
+
+    // Set web app host.
+
+    self.webAppHost = kWebAppHost;
+
+    // Set other internal hosts.
+
+    self.otherInternalHosts = @[
+                                @"about:blank",
+                                @"googleads.g.doubleclick.net",
+                                @"metric.gstatic.com"
+                                ];
+
+    // Set blocked hosts.
+
+    self.blockedHosts = @[
+                          ];
+
+    // Set max fail refresh count.
+
+    self.maxFailRefreshCount = kWebAppMaxFailRefreshCount;
+    [self resetFailRefreshCount];
+}
+</code></pre>
+
+<p>Here are some concepts you might want to know more about.</p>
+
+<ul>
+<li>Start URL - It is the first web page you want to see when you launch the app.</li>
+<li>Web App Host - The host of your web app. Most your web pages should be under this domain.</li>
+<li>Other Internal Hosts - Some other hosts you want to permit request to. For example, Google Analytics and Google AdSense. So we won't open them in an in-app browser.</li>
+<li>Blocked Hosts - The hosts you don't want the app to have access to. For example, you can add Google AdSense to block ads.</li>
+<li>Max Fail Refresh Count - When the app fails to open a web page, it will automatically retry a few times before alerting user.</li>
+</ul><h3>
+<a name="localization" class="anchor" href="#localization"><span class="octicon octicon-link"></span></a>Localization</h3>
+
+<p>This project uses <code>NSLocalizedString()</code> to manage multi language. You can use <code>genstrings</code> command in Terminal to generate a <code>Localizable.strings</code> file and translate to the language you want on your own.</p>
+
+<h3>
+<a name="launch-image-splash-screen" class="anchor" href="#launch-image-splash-screen"><span class="octicon octicon-link"></span></a>Launch Image (Splash Screen)</h3>
+
+<p>You can replace these images:</p>
+
+<ul>
+<li>Default.png</li>
+<li><a href="mailto:Default@2x.png">Default@2x.png</a></li>
+<li><a href="mailto:Default-568h@2x.png">Default-568h@2x.png</a></li>
+</ul><h3>
+<a name="icon" class="anchor" href="#icon"><span class="octicon octicon-link"></span></a>Icon</h3>
+
+<p>You can drag your icons into <code>App Icons</code> in Summary tab of iOS Application Target.</p>
+
+<h3>
+<a name="app-name" class="anchor" href="#app-name"><span class="octicon octicon-link"></span></a>App Name</h3>
+
+<p>And of course don't forget to change the name to your app's name. You can do this by changing the build target name.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This code is distributed under the terms and conditions of the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+
+<h2>
+<a name="donate" class="anchor" href="#donate"><span class="octicon octicon-link"></span></a>Donate</h2>
+
+<p>You can support me in various ways: Cash donation, purchasing items on Amazon Wishlists, or just improve my code and send a pull request.</p>
+
+<p>Via:</p>
+
+<ul>
+<li><a href="https://me.alipay.com/alexrezit">Alipay</a></li>
+<li><a href="http://www.amazon.cn/wishlist/P8YMPIX8QFTN/">Amazon Wishlist</a></li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Webappwrapper-ios maintained by <a href="https://github.com/AlexRezit">AlexRezit</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
