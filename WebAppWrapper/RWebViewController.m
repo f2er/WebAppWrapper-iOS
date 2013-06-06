@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) UIWebView *webView;
 
-@property (nonatomic, strong) UIBarButtonItem *cancelButton;
+@property (nonatomic, strong) UIBarButtonItem *doneButton;
 
 @property (nonatomic, strong) UIBarButtonItem *backButton;
 @property (nonatomic, strong) UIBarButtonItem *forwardButton;
@@ -35,7 +35,7 @@
 - (void)setButtonWithLoadingStatus:(BOOL)loading;
 - (void)refreshNavigationButtonStatus;
 
-- (void)cancelButtonPressed:(id)sender;
+- (void)doneButtonPressed:(id)sender;
 - (void)backButtonPressed:(id)sender;
 - (void)forwardButtonPressed:(id)sender;
 - (void)refreshButtonPressed:(id)sender;
@@ -115,7 +115,7 @@
 
 #pragma mark - Actions
 
-- (void)cancelButtonPressed:(id)sender
+- (void)doneButtonPressed:(id)sender
 {
     [self dismiss];
 }
@@ -162,11 +162,11 @@
     
     // Init navigation items.
     
-    self.cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPressed:)];
+    self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed:)];
     
     // Add navigation items.
     
-    self.navigationItem.leftBarButtonItem = self.cancelButton;
+    self.navigationItem.rightBarButtonItem = self.doneButton;
     
     // Init toolbar items.
     
