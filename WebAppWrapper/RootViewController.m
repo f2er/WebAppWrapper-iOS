@@ -30,6 +30,8 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
 
 @property (nonatomic, strong) UIWebView *webView;
 
+@property (nonatomic, weak) UIPanGestureRecognizer *panGestureRecognizer;
+
 - (void)showFailLoadWarning;
 
 - (void)loadStartPage;
@@ -37,6 +39,8 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
 - (void)failRefresh;
 
 - (void)configure;
+
+- (void)panGestureReceived:(UIPanGestureRecognizer *)panGestureRecognizer;
 
 @end
 
@@ -138,6 +142,12 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
     self.webView.autoresizingMask = (UIViewAutoresizingFlexibleWidth |
                                      UIViewAutoresizingFlexibleHeight);
     [self.view addSubview:self.webView];
+    
+    // Init & add pan gesture recognizer.
+    
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureReceived:)];
+    self.panGestureRecognizer = panGestureRecognizer;
+    [self.webView addGestureRecognizer:panGestureRecognizer];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -153,6 +163,29 @@ NSUInteger const kWebAppMaxFailRefreshCount = 3;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Gesture recognizer
+
+- (void)panGestureReceived:(UIPanGestureRecognizer *)panGestureRecognizer
+{
+    if (panGestureRecognizer == self.panGestureRecognizer) {
+        UIGestureRecognizerState state = panGestureRecognizer.state;
+        CGPoint translation = [panGestureRecognizer translationInView:panGestureRecognizer.view];
+        if (state == UIGestureRecognizerStateEnded &&
+            ABS(translation.x / translation.y) > 3.0f) {
+            // Horizontal swipe.
+            if (translation.x > 0 &&
+                self.webView.canGoBack) {
+                // Go back.
+                [self.webView goBack];
+            } else if (translation.x < 0 &&
+                       self.webView.canGoForward) {
+                // Go forward.
+                [self.webView goForward];
+            }
+        }
+    }
 }
 
 #pragma mark - Web view delegate
